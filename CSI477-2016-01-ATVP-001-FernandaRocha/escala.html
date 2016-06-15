@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/bootstrap.css" rel="stylesheet" >
+
+  <script type="text/javascript">
+
+  // Função responsável por pegar os valores digitados pelo usuário e então fazer os calculos
+  function calcular() {
+
+    var num1 = Math.log10(document.cadastro.valor1.value);
+
+    var num2 = Math.log10(8*document.cadastro.valor2.value);
+
+    var num3 = 3*num2;
+
+    var num4 = (num1 + num3) - Number(2.92);
+
+    document.cadastro.esc.value = num4;
+
+    // If para exibir as mensagens de acordo com os valores informados pelo usuário
+    if ( num4 < 3.5 ){
+      alert("Geralmente não sentido, mas gravado");
+    }else if ( (num4 > 3.5) && (num4 < 5.4 )){
+      alert("Às vezes sentidos, mas raramente causa danos");
+    }else if ( (num4 > 5.5) && (num4 < 6 )){
+      alert("Pequenos danos em boas construções, mas danifica seriamente contruções ruins");
+    }else if ( (num4 > 6.1) && (num4 < 6.9 )){
+      alert("Destrutivo até 100km do epicentro");
+    }else if ( (num4 > 7) && (num4 < 7.9 )){
+      alert("Grande terremoto, serios danos numa grande faixa");
+    }else if ( num4 > 8 ){
+      alert("Enorme terremoto, danos ate mesmo em centenas de quilômetros");
+    }}
+    </script>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="principal.html">HOME</a></li>
+          <li><a href="relacione.html">JOGO PARA RELACIONAR FORMAS</a></li>
+          <li><a href="grupo.html">JOGO PARA ENCONTRAR O ERRO</a></li>
+          <li class="active"><a href="escala.html">CÁLCULO ESCALA RICHTER </a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="topo3"> </div></div><br></br>
+
+    <div class="container">
+      <center><h3>Escala Richter</h3></center><br></br>
+
+      <h4 class="dif"><p align="justify">Aqui será possível fazer os cálculos da Magnitude Ritcher corretamente e ficar atento aos resultados, podendo prever antecipadamente qualquer problema!</p></h4><br></br>
+      <form name="cadastro" action="#">
+
+        <center><h4><p>Amplitude (em milímetros) medida com um sismógrafo; </p></h4></center></center>
+        <center><input name="valor1"placeholder=" Em milimetros (Ex: 1000mm)" type="text"/></center>
+
+        <center><h4><p>Tempo(em segundos): </p></h4></center>
+        <center><input name="valor2"placeholder=" Em segundos ( Ex: 120s)" type="text"/></center><br></br>
+
+        <center><center><button type="button", onclick="calcular();"> Calcular</button></center><br></br>
+
+        <center><h4><p>MAGNITUDE RICHTER; </p></h4></center></center>
+        <center><input name="esc" type="text" disabled="true" /></center>
+
+      </form>
+    </div>
+  </body>
+  </html>

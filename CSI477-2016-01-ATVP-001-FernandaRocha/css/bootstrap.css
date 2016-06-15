@@ -1,0 +1,112 @@
+.topo {
+  background-image: url("../img/pesquisa.jpg");
+  background-repeat: no-repeat;
+  height: 200px;
+-moz-background-size: 100% 100%;
+-webkit-background-size: 100% 100%;
+background-size: 100% 100%;
+}
+.topo1 {
+  background-image: url("../img/relacionar.jpg");
+  background-repeat: no-repeat;
+  height: 200px;
+-moz-background-size: 100% 100%;
+-webkit-background-size: 100% 100%;
+background-size: 100% 100%;
+}
+
+.topo2 {
+  background-image: url("../img/pesquisa1.jpg");
+  background-repeat: no-repeat;
+  height: 200px;
+-moz-background-size: 100% 100%;
+-webkit-background-size: 100% 100%;
+background-size: 100% 100%;
+}
+.topo3 {
+  background-image: url("../img/escala1.jpg");
+  background-repeat: no-repeat;
+  height: 200px;
+-moz-background-size: 100% 100%;
+-webkit-background-size: 100% 100%;
+background-size: 100% 100%;
+}
+
+.info {
+    width: 400px;
+    height: 300px;
+    background-image: url("../img/jogo.jpg");
+    background-repeat: no-repeat;
+}
+
+.info1 {
+  width: 400px;
+  height: 300px;
+  background-image: url("../img/escala.jpg");
+
+}
+.info2 {
+    width: 300px;
+    height: 300px;
+    background-image: url("../img/quadrado.jpg");
+    background-repeat: no-repeat;
+}
+
+.info3 {
+  width: 300px;
+  height: 300px;
+  background-image: url("../img/retangulo.jpg");
+  background-repeat: no-repeat;
+}
+
+.info4 {
+  width: 300px;
+  height: 300px;
+  background-image: url("../img/circulo.png");
+  background-repeat: no-repeat;
+}
+
+.info5 {
+  width: 300px;
+  height: 300px;
+  background-image: url("../img/triangulo.jpg");
+  background-repeat: no-repeat;
+}
+
+h3{
+  background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.3));
+}
+
+h4.dif{
+  background: linear-gradient(to bottom right,tan,rosybrown,peru);
+}
+
+h4{
+  color:#FFFFFF;
+  font-family: helvetica;
+  font-size: 16pt;
+}
+
+h4.n1{
+  color:blue;
+  font-family: helvetica;
+  font-size: 16pt;
+}
+
+.jogosCaixa3{
+	background-image:url("../img/escala.jpg");
+	background-repeat:no-repeat;
+	width:677px;
+	height:525px;
+	float: right;
+	margin-right:4px;
+	}
+  .caixaConteudo{
+	width:1000px;
+	height:525px;
+	margin:auto;
+	text-align:left;
+	margin-top:5px;
+}
+
+#hm {font-size: 200pt;}

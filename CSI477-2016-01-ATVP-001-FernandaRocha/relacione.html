@@ -1,0 +1,204 @@
+-<!DOCTYPE html>
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet" >
+
+  <style media="screen">
+  body{
+    background-image: url(fundo.jpg);
+  }
+  </style>
+
+  <script type="text/javascript">
+  function prox(){
+    alert("Vamos para a próxima figura!");
+    document.getElementById('quad1').disabled=false;
+    document.getElementById('ret1').disabled=false;
+    document.getElementById('cir1').disabled=false;
+    document.getElementById('tri1').disabled=false;
+
+  }
+
+  function prox1(){
+    alert("Vamos para a próxima figura!");
+
+    document.getElementById('quad2').disabled=false;
+    document.getElementById('ret2').disabled=false;
+    document.getElementById('cir2').disabled=false;
+    document.getElementById('tri2').disabled=false;
+
+  }
+
+  function prox2(){
+    alert("Vamos para a próxima figura!");
+
+    document.getElementById('quad3').disabled=false;
+    document.getElementById('ret3').disabled=false;
+    document.getElementById('cir3').disabled=false;
+    document.getElementById('tri3').disabled=false;
+
+  }
+
+  <!-- Begin
+  // Declarando o numero que questões
+  var numQues = 4;
+
+  // Declarando o numero de opçaoes de respostas das questões
+  var numResposta = 4;
+
+  // Declarando as respostas corretas dentro do displayed
+  var resposta = new Array(4);
+
+  // Declarando as respostas corretas
+  resposta[0] = "Quadrado";
+  resposta[1] = "Retângulo";
+  resposta[2] = "Círculo";
+  resposta[3] = "Triângulo";
+
+  // Função para verificar as respostas do usuario
+  function getPonto(form) {
+    var pontuacao = 0;
+    var currElt;
+    var escolhaJogador;
+    for (i=0; i<numQues; i++) {
+      currElt = i*numResposta;
+      for (j=0; j<numResposta; j++) {
+        escolhaJogador = form.elements[currElt + j];
+        if (escolhaJogador.checked) {
+          if (escolhaJogador.value == resposta[i]) {
+            pontuacao++;
+            break;
+          }
+        }
+      }
+    }
+    // Verifica a pontuação do Jogador conforme sua resposta
+    pontuacao = Math.round(pontuacao/numQues*100);
+    form.percentage.value = pontuacao + "%";
+    //Retorna as respostas corretas
+    var respostaCorreta = "";
+    for (i=1; i<=numQues; i++) {
+      respostaCorreta += i + ". " + resposta[i-1] + "\r\n";
+    }
+    form.solutions.value = respostaCorreta;
+
+    if ( pontuacao == 100 ){
+      alert("EXCELENTE!! VOCÊ SE SAIU MUITO BEM, ACERTOU TODAS AS FIGURAS QUE MASSA!");
+    }else if (pontuacao == 75){
+      alert("MUITO BEM! GOSTEI MUITO DO SEU DESEMPENHO, ERROU APENAS 1 FORMA GEOMÉTRICA. COM UM POUQUINHO MAIS DE ESTUDOS VOCÊ ACERTARÁ TUDO! ");
+    }else if (pontuacao == 50){
+      alert("ISSO AI! VOCÊ ERROU 2 FORMAS GEOMÉTRICAS. PRECISA PRESTAR MAIS ATENÇÃO NAS AULAS!");
+    }else if (pontuacao == 25){
+      alert("POXA! VOCÊ ACERTOU APENAS 1 FORMA GEOMÉTRICA. TENHA UM POUCO MAIS DE DEDICAÇÃO COM OS ESTUDOS QUE TE AGUARDO PARA UM PRÓXIMO JOGO!");
+    }else if (pontuacao == 0){
+      alert("POXA! VOCÊ NÃO ACERTOU NENHUMA FORMA GEOMÉTRICA. PRECISA SE DEDICAR MAIS AOS ESTUDOS POIS EU ACREDITO QUE DA PRÓXIMA VOCÊ ACERTARÁ TUDO!");
+    }
+  }
+
+  //  End -->
+  </script>
+</head>
+<body>
+
+  <!--MENU-->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="principal.html">HOME</a></li>
+        <li class="active"><a href="relacione.html">JOGO PARA RELACIONAR FORMAS</a></li>
+        <li><a href="grupo.html">JOGO PARA ENCONTRAR O ERRO</a></li>
+        <li><a href="escala.html">CÁLCULO ESCALA RICHTER </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--MENU FIM-->
+
+  <div class="topo1"> </div><br></br>
+
+  <div class="container">
+    <form class="quiz">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <center><h3>BRINCANDO COM AS FORMAS GEOMÉTRICAS</h3><br/></center>
+            <h4 class="dif"><p align="justify"> As formas geométricas é algo de muito fantástico, com elas podemos criar de um tudo que existe neste mundo, mas precisamos saber corretamente cada uma!</p>
+              <p align="justify"> Preciso muito da sua ajuda para me dizer corretamente qual o nome de cada figura de acordo com a forma correspondente. Mas veja bem, você só conseguirá passar para outra figura se marcar a figura anterior! </p>
+              <p align="justify"> Eu sei o quanto que você é capaz! </p>
+              <center><p><i>Jogo educativo com associação de desenhos geomêtricos e palavras, em português!</i></p></h4></center><br/><br/>
+              <!-- tabs left -->
+
+              <div class="col-md-6">
+
+                <div class="thumbnails">
+                  <li class="span6">
+                    1)
+                    <div class="info2"></div>
+
+                    <input type="radio" name=quadrado value="Quadrado" onclick="prox()">QUADRADO<br/>
+                    <input type="radio" name=quadrado value="Retângulo" onclick="prox()">RETÂNGULO<br/>
+                    <input type="radio" name=quadrado value="Triângulo" onclick="prox()">TRIÂNGULO<br/>
+                    <input type="radio" name=quadrado value="Círculo" onclick="prox()">CÍRCULO<br/><br/>
+
+                  </li>
+
+                  <li class="span6">
+                    2)
+                    <div class="info3"></div>
+                    <input type="radio" name=retangulo id="quad1" value="Quadrado" disabled="disabled" onclick="prox1()">QUADRADO<br/>
+                    <input type="radio" name=retangulo id="ret1" value="Retângulo" disabled="disabled" onclick="prox1()">RETÂNGULO<br/>
+                    <input type="radio" name=retangulo id="tri1" value="Triângulo" disabled="disabled" onclick="prox1()">TRIÂNGULO<br/>
+                    <input type="radio" name=retangulo id="cir1" value="Círculo" disabled="disabled" onclick="prox1()">CÍRCULO<br/><br/>
+
+                  </li>
+
+                  <li class="span6">
+                    3)
+                    <div class="info4"></div><br>
+
+                    <input type="radio" name=circulo id="quad2" value="Quadrado" disabled="disabled" onclick="prox2()">QUADRADO<br/>
+                    <input type="radio" name=circulo id="ret2" value="Retângulo" disabled="disabled" onclick="prox2()">RETÂNGULO<br/>
+                    <input type="radio" name=circulo id="tri2" value="Triângulo" disabled="disabled" onclick="prox2()"> TRIÂNGULO<br/>
+                    <input type="radio" name=circulo id="cir2"  value="Círculo" disabled="disabled" onclick="prox2()"> CÍRCULO<br/><br/>
+
+                  </li>
+
+                  <li class="span6">
+                    4)
+                    <div class="info5"></div><br>
+
+                    <input type="radio" name=triangulo id="quad3" value="Quadrado" disabled="disabled" onclick="getPonto(this.form)">QUADRADO<br/>
+                    <input type="radio" name=triangulo id="ret3" value="Retângulo" disabled="disabled" onclick="getPonto(this.form)">RETÂNGULO<br/>
+                    <input type="radio" name=triangulo id="tri3" value="Triângulo" disabled="disabled" onclick="getPonto(this.form)"> TRIÂNGULO<br/>
+                    <input type="radio" name=triangulo id="cir3" value="Círculo" disabled="disabled" onclick="getPonto(this.form)"> CÍRCULO<br/><br/>
+
+                  </li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <center><input type="reset" value="LIMPAR RESPOSTAS"><br></br></center>
+        <h4 class="n1"><p> PONTUAÇÃO FINAL = <input class="bgclr" type="text" size="5" name="percentage" disabled></p></h4><br></br>
+        <h4 class="n1"><p>RESPOSTA CORRETA:<br></br></p></h4>
+        <textarea class="bgclr" name="solutions" wrap="virtual" rows="4" cols="30" disabled>
+        </textarea>
+      </form>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+  </html>

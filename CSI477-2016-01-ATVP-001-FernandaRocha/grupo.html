@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet" >
+  <style media="screen">
+  body{
+    background-image: url(fundo1.jpg);
+  }
+  </style>
+
+  <script type="text/javascript">
+  function prox(){
+    alert("Vamos para o próximo grupo!");
+    document.getElementById('g2').disabled=false;
+    document.getElementById('g21').disabled=false;
+    document.getElementById('g22').disabled=false;
+    document.getElementById('g23').disabled=false;
+  }
+  function prox1(){
+    alert("Vamos para o próximo grupo!");
+
+    document.getElementById('g3').disabled=false;
+    document.getElementById('g31').disabled=false;
+    document.getElementById('g32').disabled=false;
+    document.getElementById('g33').disabled=false;
+  }
+
+  function prox2(){
+    alert("Vamos para o próximo grupo!");
+
+    document.getElementById('g4').disabled=false;
+    document.getElementById('g41').disabled=false;
+    document.getElementById('g42').disabled=false;
+    document.getElementById('g43').disabled=false;
+  }
+
+  <!-- Begin
+  // Declarando o numero que questões
+  var numQues = 4;
+
+  // Declarando o numero de opçaoes de respostas das questões
+  var numResposta = 4;
+
+  // Declarando as respostas corretas dentro do displayed
+  var resposta = new Array(4);
+
+  // Declarando as respostas corretas
+  resposta[0] = "Sabonete";
+  resposta[1] = "Algodão Doce";
+  resposta[2] = "Máquina de Lavar";
+  resposta[3] = "Chave de Fenda";
+
+  // Função para verificar as respostas do usuario
+  function getPonto(form) {
+    var pontuacao = 0;
+    var currElt;
+    var escolhaJogador;
+    for (i=0; i<numQues; i++) {
+      currElt = i*numResposta;
+      for (j=0; j<numResposta; j++) {
+        escolhaJogador = form.elements[currElt + j];
+        if (escolhaJogador.checked) {
+          if (escolhaJogador.value == resposta[i]) {
+            pontuacao++;
+            break;
+          }
+        }
+      }
+    }
+    // Verifica a pontuação do Jogador conforme sua resposta
+    pontuacao = Math.round(pontuacao/numQues*100);
+    form.percentage.value = pontuacao + "%";
+    //Retorna as respostas corretas
+    var respostaCorreta = "";
+    for (i=1; i<=numQues; i++) {
+      respostaCorreta += i + ". " + resposta[i-1] + "\r\n";
+    }
+    form.solutions.value = respostaCorreta;
+
+    if ( pontuacao == 100 ){
+      alert("EXCELENTE!! VOCÊ SE SAIU MUITO BEM, ACERTOU TODAS AS FIGURAS QUE MASSA!");
+    }else if (pontuacao == 75){
+      alert("MUITO BEM! GOSTEI MUITO DO SEU DESEMPENHO, ERROU APENAS 1 FIGURA. COM UM POUUINHO MAIS DE ATENÇÃO VOCÊ ACERTARÁ TUDO! ");
+    }else if (pontuacao == 50){
+      alert("ISSO AI! VOCÊ ERROU 2 FIGURAS. ACHO QUE VOCÊ TA UM POUQUINHO DESATENTO!");
+    }else if (pontuacao == 25){
+      alert("POXA! VOCÊ ACERTOU APENAS 1 FIGURA. TENHA UM POUCO MAIS DE DEDICAÇÃO COM OS ESTUDOS QUE TE AGUARDO PARA UM PRÓXIMO JOGO!");
+    }else if (pontuacao == 0){
+      alert("POXA! VOCÊ NÃO ACERTOU NENHUMA FIGURA. PRECISA SE DEDICAR MAIS AOS ESTUDOS POIS EU ACREDITO QUE DA PRÓXIMA VOCÊ ACERTARÁ TUDO!");
+    }
+  }
+  //  End -->
+  </script>
+</head>
+<body>
+
+  <div id="container">
+
+    <!--MENU-->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="principal.html">HOME</a></li>
+          <li><a href="relacione.html">JOGO PARA RELACIONAR FORMAS</a></li>
+          <li class="active"><a href="grupo.html">JOGO PARA ENCONTRAR O ERRO</a></li>
+          <li><a href="escala.html">CÁLCULO ESCALA RICHTER </a></li>
+        </ul>
+      </div>
+    </nav>
+    <!--MENU FIM-->
+
+    <div class="topo2"> </div>
+
+    <form class="form" method="post">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+
+            <!-- tabs left -->
+
+            <div class="col-md-6">
+              <center><h3>BRINCANDO DE DETETIVE</h3><br/></center>
+              <h4 class="dif"><p align="justify"> Você foi escolhido para uma missão na cidade de Allibaba. </p>
+                <p align="justify"> Preciso que você me ajude a achar o erro que está escondido em cada grupo, existe algo de muito sinistro por trás de cada grupo de imagens.  </p>
+                <p align="justify"> Eu sei o quanto que você é capaz! </p><br></br>
+                <p align="justify"> Mas preste bem a atenção, você só passará para outro grupo se marcar uma opção do grupo anterior. </p></h4><br></br>
+
+                <div class="thumbnails">
+                  <li class="span6">
+
+                    <img src = "./img/feijao.jpg"></td>
+                    <input type="radio" name=grupo1 value="Feijao" onclick="prox()">FEIJÃO<br/>
+
+                  </li>
+
+                  <li class="span6">
+                    <img src = "./img/arroz.jpg">
+                    <input type="radio" name=grupo1 value="Arroz" onclick="prox()">ARROZ<br/>
+
+                  </li>
+
+                  <li class="span6">
+
+                    <img src = "./img/batata.jpg">
+                    <input type="radio" name=grupo1 value="Batata" onclick="prox()">BATATA<br/>
+
+                  </li>
+
+                  <li class="span6">
+                    <img src = "./img/sabonete.jpg">
+                    <input type="radio" name=grupo1 value="Sabonete" onclick="prox()">SABONETE<br/>
+
+                  </li>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <center><h3>GRUPO 2 (MEIOS DE LOCOMOÇÃO) -- OPS! TEM ALGO DE ERRADO AQUI QUE NÃO POSSO UTILIZAR PARA ME LOCOMOVER VOCÊ ME AJUDA A ACHAR?</h3><br/><br/></center>
+
+              <div class="thumbnails">
+                <li class="span6">
+
+                  <img src = "./img/bicicleta.jpg">
+                  <input type="radio" name=grupo2 id="g2" value="Bicicleta" disabled="disabled" onclick="prox1()">BICICLETA<br/>
+
+                </li>
+
+                <li class="span6">
+                  <img src = "./img/carro.jpg"></td>
+                  <input type="radio" name=grupo2 id="g21" value="Carro" disabled="disabled" onclick="prox1()">CARRO<br/>
+
+                </li>
+
+                <li class="span6">
+                  <img src = "./img/moto.jpg">
+                  <input type="radio" name=grupo2 id="g22" value="Moto" disabled="disabled" onclick="prox1()">MOTO<br/>
+
+                </li>
+
+                <li class="span6">
+                  <img src = "./img/doce.jpg">
+                  <input type="radio" name=grupo2 id="g23" value="Algodão Doce" disabled="disabled" onclick="prox1()">ALGODÃO DOCE<br/>
+
+                </li>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <center><h3>GRUPO 3 (OBJETOS DE PRAIA) -- OPS! ESTOU INDO PARA PRAIA, SERÁ QUE POSSO LEVAR TUDO?</h3><br/><br/></center>
+
+              <div class="thumbnails">
+                <li class="span6">
+
+
+                  <img src = "./img/oculos.jpg"></td>
+                  <input type="radio" name=grupo3 id="g3" value="Óculos de Sol" disabled="disabled" onclick="prox2()">ÓCULOS DE SOL<br/>
+
+                </li>
+
+                <li class="span6">
+                  <img src = "./img/cadeira.jpg">
+                  <input type="radio" name=grupo3 id="g31" value="Cadeira de Praia" disabled="disabled" onclick="prox2()">CADEIRA DE PRAIA<br/>
+
+                </li>
+
+                <li class="span6">
+                  <img src = "./img/maquina.jpg"></td>
+                  <input type="radio" name=grupo3 id="g32" value="Máquina de Lavar" disabled="disabled" onclick="prox2()">MÁQUINA DE LAVAR<br/>
+
+                </li>
+
+                <li class="span6">
+                  <img src = "./img/sombrinha.jpg">
+                  <input type="radio" name=grupo3 id="g33" value="Sombrinha" disabled="disabled" onclick="prox2()">SOMBRINHA<br/>
+
+                </li>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <center><h3>GRUPO 4 (BRINQUEDOS) -- VIXI, TEM ALGO QUE NÃO POSSO USAR PARA BRINCAR, SERÁ CAPAZ DE PERCEBER?</h3><br/><br/></center>
+
+              <div class="thumbnails">
+                <li class="span6">
+
+
+                  <img src = "./img/chave.jpg">
+                  <input type="radio" name=grupo4 id="g4" value="Chave de Fenda" disabled="disabled" onclick="getPonto(this.form)">CHAVE DE FENDA<br/>
+
+                </li>
+
+                <li class="span6">
+                  <img src = "./img/patins.jpg">
+                  <input type="radio" name=grupo4 id="g41" value="Patins" disabled="disabled" onclick="getPonto(this.form)">PATINS<br/>
+
+                </li>
+
+                <li class="span6">
+                  <img src = "./img/skate.jpg">
+                  <input type="radio" name=grupo4 id="g42" value="Skate" disabled="disabled" onclick="getPonto(this.form)">SKATE<br/>
+
+                </li>
+
+                <li class="span6">
+                  <img src = "./img/bola.jpg">
+                  <input type="radio" name=grupo4 id="g43" value="Bola" disabled="disabled" onclick="getPonto(this.form)">BOLA<br><br/><br><br/>
+                </li>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <center><input type="reset" value="LIMPAR RESPOSTAS"><br></br></center>
+        <h4 class="n1"><p> PONTUAÇÃO FINAL = <strong><input class="bgclr" type="text" size="5" name="percentage" disabled></strong></p></h4><br></br></center>
+        <h4 class="n1"><p>RESPOSTA CORRETA:</p></h4><br></br>
+        <textarea class="bgclr" name="solutions" wrap="virtual" rows="4" cols="30" disabled>
+        </textarea>
+      </form>
+    </div>
+  </body>
+  </html>
