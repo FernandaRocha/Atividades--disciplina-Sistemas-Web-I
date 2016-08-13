@@ -39,14 +39,5 @@ class ExamesController extends AppController{
       }
     }
   }
-
-  public function del($codigo){
-
-    $this->Cidade->delete($codigo);
-    $this->Flash->set('Cidade excluida com Sucesso');
-    $this->redirect(array('action' => 'index'));
-
-  }
-
 }
 ?>
